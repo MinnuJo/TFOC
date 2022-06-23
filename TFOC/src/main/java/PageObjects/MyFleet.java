@@ -15,17 +15,28 @@ public class MyFleet {
 		this.driver=driver;
 	}
 
-	By vesselid=By.xpath("//div[@id=\'vessel-card-1000006\']");
+	By vesselid=By.xpath("//small[contains(text(),'IMO 1000006')]");
 	By shipicon=By.cssSelector("div.menu-item-icon.ship");
+	By TFOC=By.xpath("//div[contains(text(),'TFOC')]");
+	By OtherApp=By.xpath("//header/nav[1]/ul[1]/li[9]/div[1]");
 	
 	public WebElement getvesselid()
 	{
 		return driver.findElement(vesselid);
 	}
 	
+	public WebElement getTFOC() {
+		return driver.findElement(TFOC);
+	}
+
+
 	public WebElement getshipicon()
 	{
 		return driver.findElement(shipicon);
 		
+	}
+	public WebElement getotherapps()
+	{
+		return driver.findElement(OtherApp);
 	}
 }

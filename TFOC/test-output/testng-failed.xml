@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="StepDefinitions.BackgroundLogin$MyStepDefinitions">
+      <class name="CucumberOptions.TestRunner">
         <methods>
-          <include name="i_submit_admin_and_alphor1"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- StepDefinitions.BackgroundLogin$MyStepDefinitions -->
+      </class> <!-- CucumberOptions.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

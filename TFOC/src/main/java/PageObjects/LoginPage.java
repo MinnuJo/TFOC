@@ -7,13 +7,15 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 	public WebDriver driver;
 
-	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+public LoginPage(WebDriver driver)
+{
+	this.driver=driver;
 	}
 
 	By username = By.id("loginUserName");
 	By password = By.id("loginPwd");
 	By loginbutton = By.id("btnLogin");
+	
 
 	public WebElement getUsername() {
 		return driver.findElement(username);

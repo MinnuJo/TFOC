@@ -1,0 +1,29 @@
+package TFOC;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+
+public class base {
+	
+	public WebDriver driver;
+	
+	public void initializedriver() throws IOException
+	{
+		Properties prop=new Properties();
+		FileInputStream fis=new FileInputStream("C:\\Users\\Minnu Johnson\\Documents\\Automation\\TFOC\\src\\main\\java\\TFOC\\data.properties");
+		prop.load(fis);
+		String browser=prop.getProperty("browser");
+		System.out.print(browser);
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Minnu\\Automation");
+		driver=new ChromeDriver();
+	}
+
+}

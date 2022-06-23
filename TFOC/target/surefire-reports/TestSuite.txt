@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.822 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.487 s <<< FAILURE! - in TestSuite
+setUpClass(CucumberOptions.TestRunner)  Time elapsed: 0.395 s  <<< FAILURE!
+java.lang.IllegalArgumentException: path must exist: D:\TFOC\src\test\java\features
+
